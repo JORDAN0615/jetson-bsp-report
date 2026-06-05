@@ -29,7 +29,7 @@ Do not generate logos or paste full reference page screenshots into the PPT. Use
    - Use black background, green prompt, blue path, gray command text, red output values, and a red highlight box around matched output values.
    - For slide 23, highlight only actual `block/sdX` tokens. If a command does not output `block/sdX`, render the real output without adding fake success text.
 3. Create the PowerPoint report page.
-   - Use `scripts/create_single_slide_report.py`.
+   - Use `scripts/create_slide.py`.
    - With only `--screenshot`, it creates a one-slide slide 22 report.
    - With `--block-screenshots`, it creates a two-slide report from the blank logo template and inserts six generated block-device evidence images.
 4. Validate the result.
@@ -63,7 +63,7 @@ python3 scripts/render_terminal_png.py \
 Create a two-page report:
 
 ```bash
-python3 scripts/create_single_slide_report.py \
+python3 scripts/create_slide.py \
   --template assets/blank_logo_template.pptx \
   --screenshot /absolute/path/to/terminal_usb3.png \
   --block-screenshots \
@@ -79,7 +79,7 @@ python3 scripts/create_single_slide_report.py \
 Create the original one-page report:
 
 ```bash
-python3 scripts/create_single_slide_report.py \
+python3 scripts/create_slide.py \
   --template assets/blank_logo_template.pptx \
   --screenshot /absolute/path/to/terminal_usb3.png \
   --output /absolute/path/to/usb3_factory_verification.pptx
